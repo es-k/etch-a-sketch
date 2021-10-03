@@ -6,7 +6,7 @@ body{
 }
 
 .sketch-border{
-  background-color: #EF4444;
+  background-color: #e41313;
   height: 600px;
   width: 800px;
   margin: auto;
@@ -17,11 +17,12 @@ body{
   align-items: center;
   gap: 20px;
   padding: 24px;
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.3);
 }
 
 h1{
   margin: 0;
-  color: #FBBF24;
+  color: #fcc947;
 }
 
 .sketch-pad{
