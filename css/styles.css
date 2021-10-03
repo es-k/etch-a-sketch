@@ -1,0 +1,32 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A7F3D0;
+}
+
+.sketch-border{
+  background-color: #EF4444;
+  height: 600px;
+  width: 800px;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+}
+
+h1{
+  margin: 0;
+  color: #FBBF24;
+}
+
+.sketch-pad{
+  background-color: #F3F4F6;
+  height: 86%;
+  width: 86%;
+  border-radius: 3px;
+}
