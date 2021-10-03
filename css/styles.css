@@ -17,10 +17,11 @@ body{
   align-items: center;
   gap: 20px;
   padding: 24px;
-  box-shadow: 2px 3px 12px rgba(0,0,0,0.3);
+  box-shadow: 2px 3px 22px rgba(0,0,0,0.5);
 }
 
 h1{
+  font-family: 'Eagle Lake', cursive;
   margin: 0;
   color: #fcc947;
 }
@@ -30,4 +31,8 @@ h1{
   height: 86%;
   width: 86%;
   border-radius: 3px;
+}
+
+.square{
+  border: 1px dotted red;
 }
