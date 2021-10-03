@@ -1,11 +1,18 @@
 const pad = document.body.getElementsByClassName("sketch-pad")[0];
 
-function makeGrid(size){
-  for (let i = 0; i < size; i++){
+function makeGrid(size) {
+  for (let i = 0; i < size; i++) {
     const square = document.createElement("div");
     square.className = "square";
     pad.appendChild(square);
-  }  
+  }
+}
+makeGrid(16 * 16);
+
+function paint() {
+
 }
 
-makeGrid(16);
+window.addEventListener("hover", (e) => {
+  console.log(e);
+});

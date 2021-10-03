@@ -1,11 +1,11 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #A7F3D0;
+  background-color: #d1fae5;
 }
 
-.sketch-border{
+.sketch-border {
   background-color: #e41313;
   height: 600px;
   width: 800px;
@@ -17,22 +17,22 @@ body{
   align-items: center;
   gap: 20px;
   padding: 24px;
-  box-shadow: 2px 3px 22px rgba(0,0,0,0.5);
+  box-shadow: 2px 3px 22px rgba(0, 0, 0, 0.5);
 }
 
-h1{
-  font-family: 'Eagle Lake', cursive;
+h1 {
+  font-family: "Eagle Lake", cursive;
   margin: 0;
   color: #fcc947;
 }
 
-.sketch-pad{
-  background-color: #F3F4F6;
+.sketch-pad {
+  background-color: #e5e7eb;
   height: 86%;
   width: 86%;
-  border-radius: 3px;
-}
-
-.square{
-  border: 1px dotted red;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
 }
