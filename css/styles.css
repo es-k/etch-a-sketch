@@ -5,10 +5,16 @@ body {
   background-color: #d1fae5;
 }
 
+h1 {
+  font-family: "Eagle Lake", cursive;
+  margin: 0;
+  color: #fcc947;
+}
+
 .sketch-border {
   background-color: #e41313;
   height: 600px;
-  width: 800px;
+  width: 600px;
   margin: auto;
   border-radius: 20px;
   display: flex;
@@ -20,19 +26,38 @@ body {
   box-shadow: 2px 3px 22px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-  font-family: "Eagle Lake", cursive;
-  margin: 0;
-  color: #fcc947;
-}
-
 .sketch-pad {
   background-color: #e5e7eb;
   height: 86%;
   width: 86%;
   border-radius: 6px;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
   box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+
+.buttons{
+  display: flex;
+  gap: 2em;
+}
+
+.left-buttons{
+  display: flex;
+  gap: 0.5em;
+}
+
+.right-buttons{
+  display: flex;
+  gap: 0.5em;
+}
+
+button{
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #FEF3C7;
+  color: #991B1B;
+  font-size: 14px;
+  padding: 0.5em;
+  font-family: 'Fira Sans Condensed', sans-serif;
+
 }
