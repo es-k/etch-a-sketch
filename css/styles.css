@@ -37,7 +37,7 @@ h1 {
 
 .buttons{
   display: flex;
-  gap: 2em;
+  gap: 3em;
 }
 
 .left-buttons{
@@ -45,7 +45,7 @@ h1 {
   gap: 0.5em;
 }
 
-.right-buttons{
+.middle-buttons{
   display: flex;
   gap: 0.5em;
 }
@@ -60,4 +60,9 @@ button{
   padding: 0.5em;
   font-family: 'Fira Sans Condensed', sans-serif;
 
+}
+
+.selected{
+  background-color: #FDE68A;
+  color: #7F1D1D;
 }
