@@ -40,12 +40,12 @@ h1 {
   gap: 3em;
 }
 
-.left-buttons{
+.size-buttons{
   display: flex;
   gap: 0.5em;
 }
 
-.middle-buttons{
+.color-buttons{
   display: flex;
   gap: 0.5em;
 }

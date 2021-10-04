@@ -1,6 +1,7 @@
 const pad = document.body.getElementsByClassName("sketch-pad")[0];
-const leftButtons = document.body.getElementsByClassName("left-buttons")[0];
-const sizeButtons = Array.from(leftButtons.children);
+const sizeButtons = document.body.getElementsByClassName("size-buttons")[0];
+const colorButtons = document.body.getElementsByClassName("color-buttons")[0];
+const clearButton = document.getElementById("clear");
 
 function makeGrid(size) {
   for (let i = 0; i < size * size; i++) {
@@ -11,8 +12,11 @@ function makeGrid(size) {
     pad.appendChild(square);
   }
 }
-makeGrid(100);
 
+function removeGrid() {
+  grid = [...pad.children];
+  grid.forEach((square) => square.remove());
+}
 
 function paint(e) {
   if (e.target.className !== "sketch-pad") {
@@ -32,8 +36,9 @@ function isSelected(target) {
   return false;
 }
 
-function selectSize(target) {
-  sizeButtons.forEach(button => {
+function Select(target) {
+  const siblings = [...target.parentNode.children];
+  siblings.forEach((button) => {
     if (button === target) button.className = "selected";
     else button.classList.remove("selected");
   });
@@ -41,10 +46,16 @@ function selectSize(target) {
 
 pad.addEventListener("mouseover", paint);
 
-leftButtons.addEventListener("click", (e) => {
+sizeButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     if (!isSelected(e.target)) {
-      selectSize(e.target);
+      Select(e.target);
+      removeGrid();
+      makeGrid(`${e.target.id}`);
     }
   }
+});
+
+clearButton.addEventListener("click", (e) => {
+  removeGrid();
 });
