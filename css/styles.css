@@ -35,34 +35,33 @@ h1 {
   box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
 }
 
-.buttons{
+.buttons {
   display: flex;
   gap: 3em;
 }
 
-.size-buttons{
+.size-buttons {
   display: flex;
   gap: 0.5em;
 }
 
-.color-buttons{
+.color-buttons {
   display: flex;
   gap: 0.5em;
 }
 
-button{
+button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #FEF3C7;
-  color: #991B1B;
+  background-color: #fef3c7;
+  color: #991b1b;
   font-size: 14px;
-  padding: 0.5em;
-  font-family: 'Fira Sans Condensed', sans-serif;
-
+  padding: 0.4em;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
-.selected{
-  background-color: #FDE68A;
-  color: #7F1D1D;
+.selected {
+  background-color: #fde68a;
+  color: #7f1d1d;
 }

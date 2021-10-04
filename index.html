@@ -1,47 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Etch A Sketch</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-  <title>Etch A Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+  </head>
 
-
-  <script src="js/scripts.js" defer></script>
-</head>
-
-<body>
-  <div class="sketch-border">
-    <h1 class="title">Etch A Sketch</h1>
-    <div class="sketch-pad">
-
+  <body>
+    <div class="sketch-border">
+      <h1 class="title">Etch A Sketch</h1>
+      <div class="sketch-pad"></div>
+      <div class="buttons">
+        <div class="size-buttons">
+          <button id="16">Large</button>
+          <button id="32">Medium</button>
+          <button id="64">Small</button>
+          <button id="100">Tiny</button>
+        </div>
+        <div class="color-buttons">
+          <button id="gray">Grayscale</button>
+          <button id="rainbow">Rainbow</button>
+        </div>
+        <div class="right-buttons">
+          <button id="clear">Clear</button>
+        </div>
+      </div>
     </div>
-    <div class="buttons">
-      <div class="size-buttons">
-        <button id="16">Large</button>
-        <button id="32">Medium</button>
-        <button id="64">Small</button>
-        <button id="100">Tiny</button>
-      </div>
-      <div class="color-buttons">
-        <button id="gray">Grayscale</button>
-        <button id="rainbow">Rainbow</button>
-      </div>
-      <div class="right-buttons">
-        <button id="clear">Clear</button>
-      </div>
-    </div>
-  </div>
-</body>
-
-
+  </body>
 </html>
