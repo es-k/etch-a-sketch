@@ -3,6 +3,7 @@ const sizeButtons = document.body.getElementsByClassName("size-buttons")[0];
 const colorButtons = document.body.getElementsByClassName("color-buttons")[0];
 const clearButton = document.getElementById("clear");
 
+
 function makeGrid(size) {
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
@@ -51,9 +52,16 @@ function Select(target) {
   });
 }
 
-
-
-pad.addEventListener("mouseover", paintRainbow);
+function changeColor(e) {
+  if (e.target.id === "gray"){
+    pad.removeEventListener("mouseover", paintRainbow);
+    pad.addEventListener("mouseover", paintGray);
+  }
+  else if (e.target.id === "rainbow"){
+    pad.removeEventListener("mouseover", paintGray);
+    pad.addEventListener("mouseover", paintRainbow);
+  }
+}
 
 sizeButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -69,6 +77,7 @@ colorButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     if (!isSelected(e.target)) {
       Select(e.target);
+      changeColor(e);
     }
   }
 });
