@@ -3,27 +3,33 @@ const sizeButtons = document.body.getElementsByClassName("size-buttons")[0];
 const colorButtons = document.body.getElementsByClassName("color-buttons")[0];
 const clearButton = document.getElementById("clear");
 
-
 function makeGrid(size) {
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
     square.className = "2";
-    pad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    pad.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    pad.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
     pad.appendChild(square);
   }
 }
 
 function removeGrid() {
-  grid = [...pad.children];
+  let grid = [...pad.children];
   grid.forEach((square) => square.remove());
+}
+
+function clearGrid() {
+  let grid = [...pad.children];
+  grid.forEach((square) => {
+    square.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+    square.className = "2";
+  });
 }
 
 function paintGray(e) {
   if (e.target.className !== "sketch-pad") {
     let blackLevel = parseInt(e.target.className);
     blackLevel++;
-    if (blackLevel < 9) {
+    if (blackLevel <= 9) {
       e.target.style.backgroundColor = `rgba(0,0,0,0.${blackLevel})`;
     }
     e.target.className = `${blackLevel}`;
@@ -38,9 +44,7 @@ function paintRainbow(e) {
 }
 
 function isSelected(target) {
-  if (target.className === "selected") {
-    return true;
-  }
+  if (target.className === "selected") return true;
   return false;
 }
 
@@ -53,15 +57,18 @@ function Select(target) {
 }
 
 function changeColor(e) {
-  if (e.target.id === "gray"){
+  if (e.target.id === "gray") {
     pad.removeEventListener("mouseover", paintRainbow);
     pad.addEventListener("mouseover", paintGray);
-  }
-  else if (e.target.id === "rainbow"){
+  } else if (e.target.id === "rainbow") {
     pad.removeEventListener("mouseover", paintGray);
     pad.addEventListener("mouseover", paintRainbow);
   }
 }
+
+////////////
+// EVENTS //
+////////////
 
 sizeButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -83,5 +90,19 @@ colorButtons.addEventListener("click", (e) => {
 });
 
 clearButton.addEventListener("click", (e) => {
-  removeGrid();
+  clearGrid();
 });
+
+//////////////
+// DEFAULTS //
+//////////////
+
+//Grayscale
+const grayButton = document.getElementById("gray");
+grayButton.className = "selected";
+pad.addEventListener("mouseover", paintGray);
+
+//Medium Size
+const mediumButton = document.getElementById("32");
+mediumButton.className = "selected";
+makeGrid(32);
