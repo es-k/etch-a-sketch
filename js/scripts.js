@@ -18,7 +18,7 @@ function removeGrid() {
   grid.forEach((square) => square.remove());
 }
 
-function paint(e) {
+function paintGray(e) {
   if (e.target.className !== "sketch-pad") {
     let blackLevel = parseInt(e.target.className);
     blackLevel++;
@@ -26,6 +26,13 @@ function paint(e) {
       e.target.style.backgroundColor = `rgba(0,0,0,0.${blackLevel})`;
     }
     e.target.className = `${blackLevel}`;
+  }
+}
+
+function paintRainbow(e) {
+  if (e.target.className !== "sketch-pad") {
+    let color = Math.floor(Math.random() * 16777215).toString(16);
+    e.target.style.backgroundColor = `#${color}`;
   }
 }
 
@@ -44,7 +51,9 @@ function Select(target) {
   });
 }
 
-pad.addEventListener("mouseover", paint);
+
+
+pad.addEventListener("mouseover", paintRainbow);
 
 sizeButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -52,6 +61,14 @@ sizeButtons.addEventListener("click", (e) => {
       Select(e.target);
       removeGrid();
       makeGrid(`${e.target.id}`);
+    }
+  }
+});
+
+colorButtons.addEventListener("click", (e) => {
+  if (e.target.nodeName === "BUTTON") {
+    if (!isSelected(e.target)) {
+      Select(e.target);
     }
   }
 });
