@@ -66,9 +66,7 @@ function changeColor(e) {
   }
 }
 
-////////////
 // EVENTS //
-////////////
 
 sizeButtons.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -93,9 +91,7 @@ clearButton.addEventListener("click", (e) => {
   clearGrid();
 });
 
-//////////////
 // DEFAULTS //
-//////////////
 
 //Grayscale
 const grayButton = document.getElementById("gray");
