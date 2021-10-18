@@ -1,4 +1,4 @@
-# [etch-a-sketch](https://es-k.github.io/etch-a-sketch)
+# [etch-a-sketch](https://gui-petry.github.io/etch-a-sketch/)
 
 This project was suggested by [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project).
 
