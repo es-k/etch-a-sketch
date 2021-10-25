@@ -15,6 +15,7 @@ function makeGrid(size) {
 }
 
 function removeGrid() {
+  pad.innerHTML = "";
 }
 
 function clearGrid() {
