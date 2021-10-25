@@ -19,6 +19,7 @@ function removeGrid() {
 }
 
 function clearGrid() {
+  [...pad.children].forEach((square) => {
     square.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
     square.className = "2";
   });
