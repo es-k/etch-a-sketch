@@ -4,22 +4,20 @@ const colorButtons = document.body.getElementsByClassName("color-buttons")[0];
 const clearButton = document.getElementById("clear");
 
 function makeGrid(size) {
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
     square.className = "2";
-    pad.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
-    pad.appendChild(square);
+    fragment.appendChild(square);
   }
+  pad.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
+  pad.appendChild(fragment);
 }
 
 function removeGrid() {
-  let grid = [...pad.children];
-  grid.forEach((square) => square.remove());
 }
 
 function clearGrid() {
-  let grid = [...pad.children];
-  grid.forEach((square) => {
     square.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
     square.className = "2";
   });
